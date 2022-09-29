@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div class="app">
+    <table class="striped">
+        <thead>
+        <tr>
+            <th>
+                <label>
+                    <input type="checkbox" class="filled-in select_all_users"/>
+                    <span></span></label>
+            </th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Banned</th>
+            <th>Reg date</th>
+            <th>Last auth</th>
+            <th>Role (status)</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label>
+                        <input type="checkbox" class="filled-in select_user" id="{{id}}" name="{{id}}"/>
+                        <span></span>
+                    </label>
+                </td>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{banned}}</td>
+                <td>{{createdAt}}</td>
+                <td>{{authorizeAt}}</td>
+                <td>{{#each roles}}
+                    {{description}}
+                    {{/each}}
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="index.js" type="module"></script>
+
+</body>
+</html>
